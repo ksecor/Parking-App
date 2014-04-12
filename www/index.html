@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width">
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <title>Maps</title>
+      <link rel="stylesheet" href="jquery.mobile/jquery.mobile-1.1.0.css" type="text/css">
+<link rel="stylesheet" href="mapapp.css" type="text/css">
+<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBMfMqqnIAtA6Lhvk6sgF3vKhcgTDNrkUQ&sensor=false">
+</script>
+<script type="text/javascript" src="jquery.mobile/jquery-1.7.2.min"></script>
+<script type="text/javascript" src="jquery.ui.map/jquery.ui.map.js"></script>
+<script type="text/javascript" src="jquery.ui.map/jquery.ui.map.services.js"></script>
+<script type="text/javascript" src="jquery.ui.map/jquery.ui.map.extensions.js"></script>
+<script src="markerwithlabel.v1.1.5.min.js" type="text/javascript"></script>        
+<script type="text/javascript" src="jquery.mobile/jquery.mobile-1.1.0.js"></script>      
+        <script type="text/javascript" src="mapapp.js"></script>
+	
+	</head>
+  <body>
+
+	<div data-role="page" data-theme="c" id="page-map">
+
+	<div data-role="content" id="map-content">
+		<div id="map_canvas"></div>
+
+	<div id="mask"></div>
+	<div id="markerdiv"></div>
+	
+	<div id="controls" style="display:none;">
+	<div data-role="controlgroup" data-type="horizontal" >
+		<a href="#" id="current_pos_marker" data-role="button">&nbsp;&nbsp;<img src="images/markers/gmarker18h.png"/>&nbsp;&nbsp;</a>
+		<a href="#page-marker" data-role="button"><img src="images/markers/list18h.png"/>&nbsp;Markers</a>
+	</div>
+	</div>
+	
+	</div><!-- /content -->
+	
+	</div><!-- /page-map -->
+
+	<div data-role="page" data-theme="c" id="page-marker">
+
+	<div data-role="content">
+
+		<div data-role="collapsible" data-theme="b" data-content-theme="c">
+			<h3>Instructions</h3>
+				<strong>Map</strong>
+				<li>Tap to add blue marker</li>
+				<li>Tap <img src="images/markers/gimage.png" width="10" height="17"> in map controls to add marker at current location</li>
+				<li>Tap marker to edit or remove it</li>
+				<li>Drag marker anywhere to change its location</li>
+				<br/><strong>Saved Marker List</strong>
+				<li>Tap marker to see it centered on map</li>
+				<li>Tap gear icon to edit or remove marker</li>
+		</div>
+
+		<ul id="marker-list" data-role="listview" data-inset="true" data-split-icon="gear" data-split-theme="d">
+			<li data-role="list-divider">Saved Markers</li>
+			<li id="li-placeholder"><a href="#page-map" data-direction="reverse"><h4 style="color:#aaa;">(Tap on map to add marker)</h4></a><a href="#page-map" data-direction="reverse">Edit</a></li>
+		</ul>
+
+	</div><!-- /content -->
+	
+	<div data-role="footer" data-theme="d" data-position="fixed">
+	<div data-role="navbar">
+	<ul>
+	    	<li><a href="#page-map" data-direction="reverse">Return to Map</a></li>
+	</ul>
+	</div>
+	</div>
+	
+	</div><!-- /page-marker -->
+
+  </body>
+</html>
